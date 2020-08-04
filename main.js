@@ -4,7 +4,7 @@ function clonaOsQuadradinnhos1(){
 	let i;
 
 	for(i = 0; i < 50; i++){
-		var caixaClonada = document.createElement('DIV');
+		var caixaClonada = document.createElement('DIV');  // add um comment
 		var caixaClonada2 = document.createElement('DIV');
 		container.appendChild(caixaClonada);
 		container.appendChild(caixaClonada2);
