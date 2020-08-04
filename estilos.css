@@ -5,7 +5,10 @@ body {
 #container {
 	display: flex;
   	flex-direction: row;
-  	flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-top: 50px;
+    margin-left: 45px;
+	max-width: 1000px;
 }
 
 .caixaPixelizada {

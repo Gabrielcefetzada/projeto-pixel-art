@@ -1,17 +1,35 @@
+let container = document.querySelector('#container');
+function clonaOsQuadradinnhos1(){
 
-function clonaOsQuadradinnhos(){
+	let i;
 
-	var i = 0;
-
-	for(i = 0; i < 500; i++){
+	for(i = 0; i < 50; i++){
 		var caixaClonada = document.createElement('DIV');
 		var caixaClonada2 = document.createElement('DIV');
+		container.appendChild(caixaClonada);
+		container.appendChild(caixaClonada2);
 		caixaClonada.classList.add('caixaPixelizada');
-		caixaClonada2.classList.add('caixaPixelizadaPreto');
-		document.getElementById('container').appendChild(caixaClonada);
-		document.getElementById('container').appendChild(caixaClonada2);
+		caixaClonada2.classList.add('caixaPixelizadaPreta');
 	}
 
 }
 
-clonaOsQuadradinnhos();
+function clonaOsQuadradinnhos2(){
+
+	let i;
+
+	for(i = 0; i < 50; i++){
+		var caixaClonada = document.createElement('DIV');
+		var caixaClonada2 = document.createElement('DIV');
+		container.appendChild(caixaClonada2);
+		container.appendChild(caixaClonada);
+		caixaClonada.classList.add('caixaPixelizada');
+		caixaClonada2.classList.add('caixaPixelizadaPreta');
+	}
+
+}
+
+for(i = 0; i < 10; i++){
+	clonaOsQuadradinnhos1();
+	clonaOsQuadradinnhos2();
+}
