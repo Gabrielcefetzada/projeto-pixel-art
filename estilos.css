@@ -1,0 +1,25 @@
+body {
+	background-color: lightblue;
+}
+
+#container {
+	display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+}
+
+.caixaPixelizada {
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	border-style: solid;
+	border-width: thin;
+}
+
+.caixaPixelizadaPreta {
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	border-style: solid;
+	border-width: thin;
+}
