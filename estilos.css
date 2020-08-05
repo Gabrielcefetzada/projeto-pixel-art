@@ -23,6 +23,16 @@ img {
 
 }
 
+.titulo-em-cima-do-container2 {
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	font-family: 'Red Rose', cursive;
+	background-color: #096EB5;
+	box-shadow: 1px 1px 1px grey;
+
+}
+
 .container-flex {   /* Esse container é só pra deixar com propiedade flex os botões de ferramentas */
 	display: flex;
 	justify-content: center;
@@ -76,10 +86,10 @@ img {
   background-color: #F0F0E9;   
 }
 
-.container-das-cores {
+.container-tools-direito {
 	background-color: white;
 	width: 200px;
-	height: 500px;
+	height: 533px;
 	float: right;
 }
 
@@ -88,7 +98,7 @@ img {
   	flex-direction: row;
 	flex-wrap: wrap;
 	margin-top: 0px;
-	max-width: 800px;
+	max-width: 900px;
 	margin: auto;
 }
 
@@ -96,14 +106,33 @@ img {
 	width: 10px;
 	height: 10px;
 	background-color: white;
-	border-style: solid;
-	border-width: thin;
+
 }
 
 .caixaPixelizadaPreta {
 	width: 10px;
 	height: 10px;
-	background-color: black;
-	border-style: solid;
-	border-width: thin;
+	background-color: rgba(194, 196, 190, 0.9);
+}
+
+.container-color-picker {
+	background-color: white;
+	width: 200px;
+	height: 50px;
+	float: left;
+	margin-top: 230px;
+	display: flex;
+	justify-content: center;
+	 align-items: center;
+}
+
+#overview {
+	background-color: gray;
+	margin-left: 10px;
+	width: 180px;
+	height: 180px;
+}
+
+#colorp{
+	border: initial;
 }
