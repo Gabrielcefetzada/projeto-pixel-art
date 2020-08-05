@@ -1,14 +1,95 @@
 body {
-	background-color: lightblue;
+	background-color: #4F4F4F;
+}
+
+header {
+	background-color: #096EB5;
+	width: 100%;
+	height: 70px;
+}
+
+img {
+	width: 35px;
+	height: 35px;
+}
+
+.titulo-em-cima-do-container {
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	font-family: 'Red Rose', cursive;
+	background-color: #096EB5;
+	box-shadow: 1px 1px 1px grey;
+
+}
+
+.container-flex {   /* Esse container é só pra deixar com propiedade flex os botões de ferramentas */
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.container-das-tools {       /* Containers com bg = white */
+	background-color: white;
+	width: 200px;				
+	height: 500px;
+	float: left;
+
+}
+
+.button {
+  background-color: #096EB5;    /* Tools */
+  border: none;
+  padding: 10px 10px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px grey;
+}
+
+.button:hover {
+	background-color: #5E8CC8;
+}
+
+.container-salvar {
+	background-color: #096EB5;
+	width: 200px;
+	height: 150px;
+	float: left;
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	 align-items: center;
+}
+
+.button-salvar {
+  background-color: white;   
+  border: none;
+  padding: 15px 15px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px grey;
+}
+
+.button-salvar:hover {
+  background-color: #F0F0E9;   
+}
+
+.container-das-cores {
+	background-color: white;
+	width: 200px;
+	height: 500px;
+	float: right;
 }
 
 #container {
 	display: flex;
   	flex-direction: row;
 	flex-wrap: wrap;
-	margin-top: 50px;
-    margin-left: 45px;
-	max-width: 1000px;
+	margin-top: 0px;
+	max-width: 800px;
+	margin: auto;
 }
 
 .caixaPixelizada {

@@ -4,7 +4,7 @@ function clonaOsQuadradinnhos1(){
 	let i;
 
 	for(i = 0; i < 50; i++){
-		var caixaClonada = document.createElement('DIV');  // add um comment
+		var caixaClonada = document.createElement('DIV');  // ARRUMA A CAIXA AI PFV
 		var caixaClonada2 = document.createElement('DIV');
 		container.appendChild(caixaClonada);
 		container.appendChild(caixaClonada2);
@@ -29,7 +29,8 @@ function clonaOsQuadradinnhos2(){
 
 }
 
-for(i = 0; i < 10; i++){
+for(i = 0; i < 22; i++){
 	clonaOsQuadradinnhos1();
 	clonaOsQuadradinnhos2();
 }
+
