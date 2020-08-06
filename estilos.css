@@ -1,5 +1,6 @@
 body {
 	background-color: #4F4F4F;
+	position: relative;
 }
 
 header {
@@ -11,6 +12,14 @@ header {
 img {
 	width: 35px;
 	height: 35px;
+}
+
+.#gradient {
+	background: rgba(0,0,0,.85);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	display: none;
 }
 
 #Sobre, #Logo {
@@ -179,4 +188,35 @@ img {
 
 .novaClasse {
 	background-color: black;
+}
+
+#sobre-a-gente {
+	width: 450px;
+	height: 450px;
+	background-color: #096EB5;
+	position: absolute;
+	color: white;
+	font-family: 'Red Rose', cursive;
+	font-size: 25px;
+	padding: 30px 30px 30px 30px;
+	border-radius: 3px;
+	display: none;
+}
+
+#container-sobre-a-gente {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	z-index: 1;
+}
+
+#botao-close {
+	background-color: #003D7A;
+	padding: 5px 15px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#botao-close:hover {
+	background-color: #5E8CC8;
 }

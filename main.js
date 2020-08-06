@@ -39,3 +39,33 @@ let pixel = document.querySelector('.caixaPixelizada');
 pixel.addEventListener("mousedown", function(e){
 	e.target.style.backgroundColor = 'black';
 })
+
+
+// js para a modal
+
+let modal = document.getElementById('sobre-a-gente');
+let escuro = document.getElementById("gradient");
+
+function AbreModal(){
+
+	if(modal.style.display == 'block'){
+		modal.style.display = 'none';
+	} else {
+		modal.style.display = 'block';
+	}
+}
+
+if(escuro.style.display == 'block'){
+		escuro.style.display = 'none';
+	} else {
+		escuro.style.display = 'block';
+	}
+
+
+
+
+function FechaModal(){
+
+	modal.style.display = 'none';
+
+}
