@@ -13,8 +13,34 @@ img {
 	height: 35px;
 }
 
+#Sobre, #Logo {
+	margin-top: 1%;
+	padding: 1px 5px;
+	font-size: 30px;
+	font-family: 'Red Rose', cursive;
+	color: white;
+}
+
+#Sobre {
+	float: right;
+	margin-right: 2%;
+}
+
+#Logo {
+	float: left;
+	margin-left: 2%;
+}
+
+#Sobre:hover, #Logo:hover {
+	background-color: #003D7A;
+	padding: 1px 5px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
 .titulo-em-cima-do-container {
 	font-size: 30px;
+	margin-top: 2px;
 	color: white;
 	text-align: center;
 	font-family: 'Red Rose', cursive;
@@ -123,7 +149,7 @@ img {
 	margin-top: 230px;
 	display: flex;
 	justify-content: center;
-	 align-items: center;
+	align-items: center;
 }
 
 #overview {
@@ -135,4 +161,5 @@ img {
 
 #colorp{
 	border: initial;
+	background-color: white;
 }
