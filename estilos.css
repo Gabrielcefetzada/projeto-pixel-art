@@ -95,7 +95,7 @@ img {
 .container-das-tools {       /* Containers com bg = white */
 	background-color: white;
 	width: 200px;				
-	height: 500px;
+	height: 573px;
 	float: left;
 
 }
@@ -119,7 +119,7 @@ img {
 	width: 200px;
 	height: 150px;
 	float: left;
-	margin-top: 30px;
+	margin-top: 77px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -142,7 +142,7 @@ img {
 .container-tools-direito {
 	background-color: white;
 	width: 200px;
-	height: 533px;
+	height: 574px;
 	float: right;
 }
 
@@ -153,6 +153,7 @@ img {
 	margin-top: 0px;
 	max-width: 900px;
 	margin: auto;
+	margin-top: 2px;
 }
 
 .caixaPixelizada {
@@ -173,7 +174,7 @@ img {
 	width: 200px;
 	height: 50px;
 	float: left;
-	margin-top: 230px;
+	margin-top: 250px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -181,9 +182,12 @@ img {
 
 #overview {
 	background-color: gray;
-	margin-left: 10px;
 	width: 180px;
 	height: 180px;
+	margin-left: 8px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 #colorp{
@@ -228,7 +232,7 @@ img {
 
 #anuncie-aqui {
 	width: 800px;
-	height: 130px;
+	height: 80px;
 	margin: auto;
 	margin-top: 4%;
 	margin-bottom: 1%;
@@ -236,4 +240,24 @@ img {
 	display: flex;
 	justify-content: center;
 	font-family: 'Red Rose', cursive;
+}
+
+.caixaPixelizada2 {
+	width: 5px;
+	height: 7px;
+	background-color: white;
+}
+
+.caixaPixelizadaPreta2 {
+	width: 5px;
+	height: 7px;
+	background-color: rgba(194, 196, 190, 0.9);
+}
+
+.button:hover {
+	transform: scale(1,1.05);
+}
+
+html{
+	overflow-y:auto;
 }

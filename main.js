@@ -34,9 +34,25 @@ for(i = 0; i < 22; i++){
 	clonaOsQuadradinnhos2();
 }
 
+//js lapis
+
 let pixel = document.querySelector('.caixaPixelizada');
 
-pixel.addEventListener("mousedown", function(e){
+for(i = 0; i < pixel.length; i++){
+	if(pixel.tagName == 'DIV' || pixel.tagName == 'div'){
+		if(pixel[i].addEventListener){
+			pixel[i].addEventListener('mousedown', function(e){
+				e = e;
+    			let target = e.target || e.srcElement;
+				target.style.backgroundColor = 'black';
+			})
+		}
+	}
+}
+
+let pixel2 = document.querySelector('.caixaPixelizadaPreta');
+
+pixel2.addEventListener("mousedown", function(e){
 	e.target.style.backgroundColor = 'black';
 })
 
@@ -69,3 +85,42 @@ function FechaModal(){
 	modal.style.display = 'none';
 	escuro.style.display = 'none';
 }
+
+//js pra fazer o quadrado pixelizado no overiew
+
+let container2 = document.querySelector("#overview");
+function clonaOsQuadradinnhos3(){
+
+	let i;
+
+	for(i = 0; i < 18; i++){
+		let caixaClonada = document.createElement('DIV');
+		let caixaClonada2 = document.createElement('DIV');
+		container2.appendChild(caixaClonada);
+		container2.appendChild(caixaClonada2);
+		caixaClonada.classList.add('caixaPixelizada2');
+		caixaClonada2.classList.add('caixaPixelizadaPreta2');
+	}
+
+}
+
+function clonaOsQuadradinnhos4(){
+
+	let i;
+
+	for(i = 0; i < 18; i++){
+		let caixaClonada = document.createElement('DIV');
+		let caixaClonada2 = document.createElement('DIV');
+		container2.appendChild(caixaClonada2);
+		container2.appendChild(caixaClonada);
+		caixaClonada.classList.add('caixaPixelizada2');
+		caixaClonada2.classList.add('caixaPixelizadaPreta2');
+	}
+
+}
+
+for(i = 0; i < 14; i++){
+	clonaOsQuadradinnhos3();
+	clonaOsQuadradinnhos4();
+}
+
