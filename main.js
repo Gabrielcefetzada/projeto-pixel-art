@@ -36,7 +36,7 @@ for(i = 0; i < 22; i++){
 
 //js lapis
 
-let pixel = document.querySelector('.caixaPixelizada');
+/* let pixel = document.querySelector('.caixaPixelizada');
 
 for(i = 0; i < pixel.length; i++){
 	if(pixel.tagName == 'DIV' || pixel.tagName == 'div'){
@@ -56,7 +56,27 @@ pixel2.addEventListener("mousedown", function(e){
 	e.target.style.backgroundColor = 'black';
 })
 
+*/
 
+
+// js lapis by gabriel
+var espacos = document.getElementsByClassName("caixaPixelizada");
+var espacos2 = document.getElementsByClassName("caixaPixelizadaPreta");
+var i;
+
+function DesenhaLapis(){
+	for(i = 0; i < espacos.length; i++){
+		espacos[i].addEventListener("mouseover", function(){
+			this.style.backgroundColor = 'black';
+		});
+	}
+
+	for(i = 0; i < espacos2.length; i++){
+		espacos2[i].addEventListener("mouseover", function(){
+			this.style.backgroundColor = 'black';
+		});
+	}
+}
 // js para a modal e para escurecer o fundo ao abri-la
 
 let modal = document.getElementById('sobre-a-gente');
@@ -67,7 +87,7 @@ function AbreModal(){
 	if(modal.style.display == 'block'){
 		modal.style.display = 'none';
 	} else {
-		modal.style.display = 'block';
+		modal.style.display = 'block';	
 	}
 
 

@@ -95,7 +95,7 @@ img {
 .container-das-tools {       /* Containers com bg = white */
 	background-color: white;
 	width: 200px;				
-	height: 573px;
+	height: 500px;
 	float: left;
 
 }
@@ -119,7 +119,7 @@ img {
 	width: 200px;
 	height: 150px;
 	float: left;
-	margin-top: 77px;
+	margin-top: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -142,7 +142,7 @@ img {
 .container-tools-direito {
 	background-color: white;
 	width: 200px;
-	height: 574px;
+	height: 533px;
 	float: right;
 }
 
@@ -174,7 +174,7 @@ img {
 	width: 200px;
 	height: 50px;
 	float: left;
-	margin-top: 250px;
+	margin-top: 230px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -255,7 +255,7 @@ img {
 }
 
 .button:hover {
-	transform: scale(1,1.05);
+	transform: scale(1.1);
 }
 
 html{
