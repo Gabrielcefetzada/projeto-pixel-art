@@ -1,6 +1,11 @@
+html {
+	height: 100%;
+}
+
 body {
 	background-color: #4F4F4F;
 	position: relative;
+	height: 100%;
 }
 
 header {
@@ -14,7 +19,7 @@ img {
 	height: 35px;
 }
 
-.#gradient {
+#gradient {
 	background: rgba(0,0,0,.85);
 	height: 100%;
 	width: 100%;
@@ -219,4 +224,16 @@ img {
 
 #botao-close:hover {
 	background-color: #5E8CC8;
+}
+
+#anuncie-aqui {
+	width: 800px;
+	height: 130px;
+	margin: auto;
+	margin-top: 4%;
+	margin-bottom: 1%;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	font-family: 'Red Rose', cursive;
 }

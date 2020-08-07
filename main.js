@@ -41,7 +41,7 @@ pixel.addEventListener("mousedown", function(e){
 })
 
 
-// js para a modal
+// js para a modal e para escurecer o fundo ao abri-la
 
 let modal = document.getElementById('sobre-a-gente');
 let escuro = document.getElementById("gradient");
@@ -53,7 +53,7 @@ function AbreModal(){
 	} else {
 		modal.style.display = 'block';
 	}
-}
+
 
 if(escuro.style.display == 'block'){
 		escuro.style.display = 'none';
@@ -61,11 +61,11 @@ if(escuro.style.display == 'block'){
 		escuro.style.display = 'block';
 	}
 
-
+}
 
 
 function FechaModal(){
 
 	modal.style.display = 'none';
-
+	escuro.style.display = 'none';
 }
