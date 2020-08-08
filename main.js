@@ -58,25 +58,21 @@ pixel2.addEventListener("mousedown", function(e){
 
 */
 
-
 // js lapis by gabriel
 var espacos = document.getElementsByClassName("caixaPixelizada");
 var espacos2 = document.getElementsByClassName("caixaPixelizadaPreta");
 var i;
-
-function DesenhaLapis(){
 	for(i = 0; i < espacos.length; i++){
 		espacos[i].addEventListener("mouseover", function(){
-			this.style.backgroundColor = 'black';
+			this.style.backgroundColor = document.getElementById('colorp').value;
 		});
 	}
 
 	for(i = 0; i < espacos2.length; i++){
 		espacos2[i].addEventListener("mouseover", function(){
-			this.style.backgroundColor = 'black';
+			this.style.backgroundColor = document.getElementById('colorp').value;
 		});
 	}
-}
 // js para a modal e para escurecer o fundo ao abri-la
 
 let modal = document.getElementById('sobre-a-gente');
