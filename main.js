@@ -1,3 +1,5 @@
+// js para que as caixas pixelizadas apareçam
+
 let container = document.querySelector('#container');
 function clonaOsQuadradinnhos1(){
 
@@ -34,7 +36,7 @@ for(i = 0; i < 22; i++){
 	clonaOsQuadradinnhos2();
 }
 
-//js lapis
+//js lapis temporariamente inutilizável
 
 /* let pixel = document.querySelector('.caixaPixelizada');
 
@@ -58,21 +60,50 @@ pixel2.addEventListener("mousedown", function(e){
 
 */
 
-// js lapis by gabriel
-var espacos = document.getElementsByClassName("caixaPixelizada");
-var espacos2 = document.getElementsByClassName("caixaPixelizadaPreta");
-var i;
-	for(i = 0; i < espacos.length; i++){
-		espacos[i].addEventListener("mouseover", function(){
-			this.style.backgroundColor = document.getElementById('colorp').value;
-		});
+// js lapis by gabriel 
+
+function DesenhaLapis(){
+
+
+	let espacos = document.querySelectorAll(".caixaPixelizada");
+	let espacos2 = document.querySelectorAll(".caixaPixelizadaPreta");
+	let colorPickerValue = document.getElementById('colorp').value;
+	let i;
+
+		for(i = 0; i < espacos.length; i++){
+			espacos[i].addEventListener("mouseover", function(){
+				this.style.backgroundColor = colorPickerValue;
+			});
+		}
+
+		for(i = 0; i < espacos2.length; i++){
+			espacos2[i].addEventListener("mouseover", function(){
+				this.style.backgroundColor = colorPickerValue;
+			});
+		}
 	}
 
-	for(i = 0; i < espacos2.length; i++){
-		espacos2[i].addEventListener("mouseover", function(){
-			this.style.backgroundColor = document.getElementById('colorp').value;
-		});
+// js borracha by gustavo
+
+function Apaga(){
+
+	let borracha = document.querySelectorAll(".caixaPixelizada");
+	let borracha2 = document.querySelectorAll(".caixaPixelizadaPreta");
+	let i;
+
+		for(i = 0; i < borracha.length; i++){
+			borracha[i].addEventListener("mouseover", function(){
+				this.style.backgroundColor = 'white';
+			});
+		}
+
+		for(i = 0; i < borracha2.length; i++){
+			borracha2[i].addEventListener("mouseover", function(){
+				this.style.backgroundColor = 'rgba(194, 196, 190, 0.9)';
+			});
+		}
 	}
+
 // js para a modal e para escurecer o fundo ao abri-la
 
 let modal = document.getElementById('sobre-a-gente');
