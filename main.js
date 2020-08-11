@@ -67,18 +67,17 @@ function DesenhaLapis(){
 
 	let espacos = document.querySelectorAll(".caixaPixelizada");
 	let espacos2 = document.querySelectorAll(".caixaPixelizadaPreta");
-	let colorPickerValue = document.getElementById('colorp').value;
 	let i;
 
 		for(i = 0; i < espacos.length; i++){
 			espacos[i].addEventListener("mouseover", function(){
-				this.style.backgroundColor = colorPickerValue;
+				this.style.backgroundColor =  document.getElementById('colorp').value;
 			});
 		}
 
 		for(i = 0; i < espacos2.length; i++){
 			espacos2[i].addEventListener("mouseover", function(){
-				this.style.backgroundColor = colorPickerValue;
+				this.style.backgroundColor =  document.getElementById('colorp').value;
 			});
 		}
 	}
