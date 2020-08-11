@@ -159,16 +159,17 @@ img {
 	margin-top: 2px;
 }
 
-.caixaPixelizada {
-	width: 10px;
+.pixel {
 	height: 10px;
-	background-color: white;
+	width: 10px;
+	user-select: none;
+}
 
+.caixaPixelizada {
+	background-color: white;
 }
 
 .caixaPixelizadaPreta {
-	width: 10px;
-	height: 10px;
 	background-color: rgba(194, 196, 190, 0.9);
 }
 

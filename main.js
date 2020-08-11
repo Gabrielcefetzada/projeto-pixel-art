@@ -12,6 +12,10 @@ function clonaOsQuadradinnhos1(){
 		container.appendChild(caixaClonada2);
 		caixaClonada.classList.add('caixaPixelizada');
 		caixaClonada2.classList.add('caixaPixelizadaPreta');
+		caixaClonada.classList.add('pixel');
+		caixaClonada2.classList.add('pixel');
+		caixaClonada.draggable = false;
+		caixaClonada2.draggable = false;
 	}
 
 }
@@ -27,6 +31,10 @@ function clonaOsQuadradinnhos2(){
 		container.appendChild(caixaClonada);
 		caixaClonada.classList.add('caixaPixelizada');
 		caixaClonada2.classList.add('caixaPixelizadaPreta');
+		caixaClonada.classList.add('pixel');
+		caixaClonada2.classList.add('pixel');
+		caixaClonada.draggable = false;
+		caixaClonada2.draggable = false;
 	}
 
 }
@@ -36,51 +44,32 @@ for(i = 0; i < 22; i++){
 	clonaOsQuadradinnhos2();
 }
 
-//js lapis temporariamente inutilizável
-
-/* let pixel = document.querySelector('.caixaPixelizada');
-
-for(i = 0; i < pixel.length; i++){
-	if(pixel.tagName == 'DIV' || pixel.tagName == 'div'){
-		if(pixel[i].addEventListener){
-			pixel[i].addEventListener('mousedown', function(e){
-				e = e;
-    			let target = e.target || e.srcElement;
-				target.style.backgroundColor = 'black';
-			})
-		}
-	}
-}
-
-let pixel2 = document.querySelector('.caixaPixelizadaPreta');
-
-pixel2.addEventListener("mousedown", function(e){
-	e.target.style.backgroundColor = 'black';
-})
-
-*/
-
 // js lapis by gabriel 
 
 function DesenhaLapis(){
 
 
-	let espacos = document.querySelectorAll(".caixaPixelizada");
-	let espacos2 = document.querySelectorAll(".caixaPixelizadaPreta");
+	let pixels = document.querySelectorAll(".pixel");
+	let container = document.querySelector("#container");
+	let pressed = false;
 	let i;
 
-		for(i = 0; i < espacos.length; i++){
-			espacos[i].addEventListener("mouseover", function(){
-				this.style.backgroundColor =  document.getElementById('colorp').value;
-			});
-		}
+	container.addEventListener("mousedown", function(){
+		pressed = true;
+	})
 
-		for(i = 0; i < espacos2.length; i++){
-			espacos2[i].addEventListener("mouseover", function(){
-				this.style.backgroundColor =  document.getElementById('colorp').value;
+	container.addEventListener("mouseup", function(){
+		pressed = false;
+	})
+
+		for(i = 0; i < pixels.length; i++){
+			pixels[i].addEventListener("mouseover", function(){
+				if(pressed){
+					this.style.backgroundColor =  document.getElementById('colorp').value;
+				}
 			});
 		}
-	}
+}
 
 // js borracha by gustavo
 
@@ -170,3 +159,4 @@ for(i = 0; i < 14; i++){
 	clonaOsQuadradinnhos4();
 }
 
+// alert(Array.from(container.children).indexOf(this));
