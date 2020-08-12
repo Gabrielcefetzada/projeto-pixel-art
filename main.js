@@ -1,6 +1,7 @@
-// js para que as caixas pixelizadas apareçam
+// js para que as caixas pixelizadas apareçam (desktop)
 
 let container = document.querySelector('#container');
+
 function clonaOsQuadradinnhos1(){
 
 	let i;
@@ -42,6 +43,53 @@ function clonaOsQuadradinnhos2(){
 for(i = 0; i < 22; i++){
 	clonaOsQuadradinnhos1();
 	clonaOsQuadradinnhos2();
+}
+
+// js para que as caixas pixelizadas apareçam (mobile)
+
+let containerMobile = document.querySelector('#container-mobile');
+
+function clonaOsQuadradinnhosMobile1(){
+
+	let i;
+
+	for(i = 0; i < 20; i++){
+		var caixaClonadaMobile = document.createElement('DIV');
+		var caixaClonadaMobile2 = document.createElement('DIV');
+		containerMobile.appendChild(caixaClonadaMobile);
+		containerMobile.appendChild(caixaClonadaMobile2);
+		caixaClonadaMobile.classList.add('caixaPixelizadaMobile');
+		caixaClonadaMobile2.classList.add('caixaPixelizadaPretaMobile');
+		caixaClonadaMobile.classList.add('pixel');
+		caixaClonadaMobile2.classList.add('pixel');
+		caixaClonadaMobile.draggable = false;
+		caixaClonadaMobile2.draggable = false;
+	}
+
+}
+
+function clonaOsQuadradinnhosMobile2(){
+
+	let i;
+
+	for(i = 0; i < 20; i++){
+		var caixaClonadaMobile = document.createElement('DIV');
+		var caixaClonadaMobile2 = document.createElement('DIV');
+		containerMobile.appendChild(caixaClonadaMobile2);
+		containerMobile.appendChild(caixaClonadaMobile);
+		caixaClonadaMobile.classList.add('caixaPixelizadaMobile');
+		caixaClonadaMobile2.classList.add('caixaPixelizadaPretaMobile');
+		caixaClonadaMobile.classList.add('pixel');
+		caixaClonadaMobile2.classList.add('pixel');
+		caixaClonadaMobile.draggable = false;
+		caixaClonadaMobile2.draggable = false;
+	}
+
+}
+
+for(i = 0; i < 10; i++){
+	clonaOsQuadradinnhosMobile1();
+	clonaOsQuadradinnhosMobile2();
 }
 
 // js lapis by gabriel 
