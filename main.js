@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-// js para que as caixas pixelizadas apareçam (desktop)
-=======
-//caixas pixelizadas
->>>>>>> 761476e127f48b97f9a79d37efd5fffd4efe9c5a
+
+// js para que as caixas pidelizadas apareçam (desktop)
 
 let container = document.querySelector('#container');
 
@@ -49,7 +46,6 @@ for(i = 0; i < 22; i++){
 	clonaOsQuadradinnhos2();
 }
 
-<<<<<<< HEAD
 // js para que as caixas pixelizadas apareçam (mobile)
 
 let containerMobile = document.querySelector('#container-mobile');
@@ -96,11 +92,9 @@ for(i = 0; i < 10; i++){
 	clonaOsQuadradinnhosMobile1();
 	clonaOsQuadradinnhosMobile2();
 }
+ 
+// fazer o quadrado pixelizado no overiew
 
-// js lapis by gabriel 
-=======
-//fazer o quadrado pixelizado no overiew
->>>>>>> 761476e127f48b97f9a79d37efd5fffd4efe9c5a
 
 let container2 = document.querySelector("#overview");
 function clonaOsQuadradinnhos3(){
@@ -142,8 +136,7 @@ for(i = 0; i < 14; i++){
 	clonaOsQuadradinnhos4();
 }
 
-//lapis 
-let index;
+// lapis 
 
 function DesenhaLapis(){
 	let pixels = document.querySelectorAll(".pixel");
@@ -151,6 +144,7 @@ function DesenhaLapis(){
 	let pressed = false;
 	let i;
 	let j;
+	let index;
 
 	container.addEventListener("mousedown", function(){
 		pressed = true;
@@ -164,20 +158,19 @@ function DesenhaLapis(){
 		pixels[i].addEventListener("mouseover", function(){
 			if(pressed){
 				this.style.backgroundColor =  document.getElementById('colorp').value;
-				index = Array.from(container.children).indexOf(this);
 				//alert(index);
 			}
 		});
 	}
 
-	//lapis overview
-	let pixel2 = document.querySelectorAll(".pixel2")
-	Array.from(pixel2);
-	pixel2[index].style.backgroundColor = document.getElementById('colorp').value;
+	// lapis overview
+	// let pixel2 = document.querySelectorAll(".pixel2")
+	// Array.from(pixel2);
+	// pixel2[index].style.backgroundColor = document.getElementById('colorp').value;
 }
 
 
-//borracha 
+// js borracha 
 
 function Apaga(){
 	let borracha = document.querySelectorAll(".caixaPixelizada");
