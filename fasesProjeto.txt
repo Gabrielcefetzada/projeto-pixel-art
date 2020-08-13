@@ -1,0 +1,14 @@
+Fase 2:
+- Quatro botões de pintura e etc
+- Dimensões
+- Terminar Media Queries
+
+Fase 3:
+
+- Overview
+- Botão salvar
+- Setas Reundo e Undo
+
+Fase 4: 
+
+- Acabamento e revisão de erros
