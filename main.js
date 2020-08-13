@@ -53,7 +53,7 @@ function clonaOsQuadradinnhosMobile1(){
 
 	let i;
 
-	for(i = 0; i < 20; i++){
+	for(i = 0; i < 16; i++){
 		var caixaClonadaMobile = document.createElement('DIV');
 		var caixaClonadaMobile2 = document.createElement('DIV');
 		containerMobile.appendChild(caixaClonadaMobile);
@@ -72,7 +72,7 @@ function clonaOsQuadradinnhosMobile2(){
 
 	let i;
 
-	for(i = 0; i < 20; i++){
+	for(i = 0; i < 16; i++){
 		var caixaClonadaMobile = document.createElement('DIV');
 		var caixaClonadaMobile2 = document.createElement('DIV');
 		containerMobile.appendChild(caixaClonadaMobile2);

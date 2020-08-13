@@ -20,6 +20,21 @@ img {
 	height: 35px;
 }
 
+#menu-barra {
+	display: none;
+	background-color: white;
+	padding: 1px 5px;
+	float: right;
+	margin-top: 5%;
+	margin-right: 2%;
+	border-radius: 2px;
+	transition: 0.2s;
+}
+
+#menu-barra:hover {
+	transform: scale(1.1);
+}
+
 #gradient {
 	background: rgba(0,0,0,.85);
 	height: 100%;
@@ -161,10 +176,9 @@ img {
 
 #container-mobile {
 	display: none;
-	margin-top: 0px;
-	max-width: 100px;
-	margin: auto;
-	margin-top: 2px;
+	max-width: 320px;
+	margin-right: 3%;
+	margin-left: 3%;
 }
 
 .pixel {
@@ -303,13 +317,13 @@ footer a {
 
 /* Design Responsivo - Media Queries */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .undo-reundo, #overview, .container-tools-direito, .titulo-em-cima-do-container, #Sobre, .caixaPixelizada, .caixaPixelizadaPreta, #container, .container-salvar {
     display: none;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .container-flex, .container-das-tools {
     flex-wrap: nowrap;
     justify-content: center;
@@ -318,7 +332,7 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .button, #colorp {
     width: 45px;
     height: 45px;
@@ -327,14 +341,14 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   img {
     width: 25px;
     height: 25px;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .container-tools-direito, .container-das-tools, #anuncie-aqui {
     background-color: white;
 	width: 100%;
@@ -342,7 +356,7 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .container-salvar {
     background-color: white;
 	width: 0px;
@@ -350,13 +364,13 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .tools-baixo-mobile {
     display: block;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .container-color-picker-mobile {
     display: flex;
     justify-content: center;
@@ -364,12 +378,17 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   #container-mobile {
-  	display: flex;
+  	display: inline-flex;
   	flex-direction: row;
 	flex-wrap: wrap;
   }
 }
 
 
+@media only screen and (max-width: 800px){
+	#menu-barra {
+		display: block;
+	}
+}
