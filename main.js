@@ -145,24 +145,24 @@ function DesenhaLapis(stopFunction){
 	let i;
 	// let j;
 	// let index;
-if (stopFunction == 0) {
-	container.addEventListener("mousedown", function(){
-		pressed = true;
-	})
+	if (stopFunction == 0) {
+		container.addEventListener("mousedown", function(){
+			pressed = true;
+		})
 
-	container.addEventListener("mouseup", function(){
-		pressed = false;
-	})
+		container.addEventListener("mouseup", function(){
+			pressed = false;
+		})
 
-	for(i = 0; i < pixels.length; i++){
-		pixels[i].addEventListener("mouseover", function(){
-			if(pressed){
-				this.style.backgroundColor =  document.getElementById('colorp').value;
-				//alert(index);
-			}
-		});
+		for(i = 0; i < pixels.length; i++){
+			pixels[i].addEventListener("mouseover", function(){
+				if(pressed == true){
+					this.style.backgroundColor =  document.getElementById('colorp').value;
+					//alert(index);
+				}
+			});
+		}
 	}
-}
 	// lapis overview
 	// let pixel2 = document.querySelectorAll(".pixel2")
 	// Array.from(pixel2);
@@ -196,14 +196,14 @@ function DesenhaLapisMobile(){
 
 
 
-// js borracha 
+// borracha 
 
 function Apaga(stopFunction){
 	let borracha = document.querySelectorAll(".caixaPixelizada");
 	let borracha2 = document.querySelectorAll(".caixaPixelizadaPreta");
 	let i;
 
-if(stopFunction == 0){
+	if(stopFunction == 0){
 		for(i = 0; i < borracha.length; i++){
 			borracha[i].addEventListener("mouseover", function(){
 				this.style.backgroundColor = 'white';
@@ -218,7 +218,7 @@ if(stopFunction == 0){
 	}
 }
 
-// js borracha mobile 
+// borracha mobile 
 
 function ApagaMobile(){
 	let borrachaMob = document.querySelectorAll(".caixaPixelizadaMobile");
@@ -244,7 +244,6 @@ let modal = document.getElementById('sobre-a-gente');
 let escuro = document.getElementById("gradient");
 
 function AbreModal(){
-
 	if(modal.style.display == 'block'){
 		modal.style.display = 'none';
 	} else {
@@ -252,7 +251,7 @@ function AbreModal(){
 	}
 
 
-if(escuro.style.display == 'block'){
+	if(escuro.style.display == 'block'){
 		escuro.style.display = 'none';
 	} else {
 		escuro.style.display = 'block';
@@ -260,12 +259,33 @@ if(escuro.style.display == 'block'){
 
 }
 
-
 function FechaModal(){
-
 	modal.style.display = 'none';
 	escuro.style.display = 'none';
 }
+
+//colorpicker
+
+function rgbToHex(r, g, b) {
+	return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
+
+function pickColor() {
+	let pegarCor = document.querySelectorAll(".pixel");
+	let i;
+	let valor;
+	let cor = document.querySelector("#colorp");
+	for(i = 0; i < pegarCor.length; i++){
+		pegarCor[i].addEventListener("click", function(e){
+			valor = this.style.backgroundColor;
+			console.log(valor);
+			//cor.value = this.style.backgroundColor;	
+			console.log(cor.value);
+		});
+	}
+}
+
 
 
 
