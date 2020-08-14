@@ -181,7 +181,7 @@ function DesenhaLapisMobile(){
 			pressedMob = true;
 		})
 
-		container.addEventListener("mouseup", function(){
+		containerMob.addEventListener("mouseup", function(){
 			pressedMob = false;
 		})
 
@@ -202,16 +202,28 @@ function Apaga(stopFunction){
 	let borracha = document.querySelectorAll(".caixaPixelizada");
 	let borracha2 = document.querySelectorAll(".caixaPixelizadaPreta");
 	let i;
+	let pressed = false;
 
-	if(stopFunction == 0){
-		for(i = 0; i < borracha.length; i++){
+if(stopFunction == 0){
+
+		container.addEventListener("mousedown", function(){
+			pressed = true;
+		})
+
+		container.addEventListener("mouseup", function(){
+			pressed = false;
+		})
+
+	for(i = 0; i < borracha.length; i++){
 			borracha[i].addEventListener("mouseover", function(){
+				if (pressed) 
 				this.style.backgroundColor = 'white';
 			});
 		}
 
-		for(i = 0; i < borracha2.length; i++){
+	for(i = 0; i < borracha2.length; i++){
 			borracha2[i].addEventListener("mouseover", function(){
+			if (pressed)
 			this.style.backgroundColor = 'rgba(194, 196, 190, 0.9)';
 			});
 		}
@@ -234,6 +246,28 @@ function ApagaMobile(){
 	for(i = 0; i < borrachaMob2.length; i++){
 		borrachaMob2[i].addEventListener("mouseover", function(){
 			this.style.backgroundColor = 'rgba(194, 196, 190, 0.9)';
+		});
+	}
+}
+
+//colorpicker
+
+function rgbToHex(r, g, b) {
+	return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
+
+function pickColor() {
+	let pegarCor = document.querySelectorAll(".pixel");
+	let i;
+	let valor;
+	let cor = document.querySelector("#colorp");
+	for(i = 0; i < pegarCor.length; i++){
+		pegarCor[i].addEventListener("click", function(e){
+			valor = this.style.backgroundColor;
+			console.log(valor);
+			//cor.value = this.style.backgroundColor;	
+			console.log(cor.value);
 		});
 	}
 }
@@ -264,27 +298,7 @@ function FechaModal(){
 	escuro.style.display = 'none';
 }
 
-//colorpicker
 
-function rgbToHex(r, g, b) {
-	return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-}
-
-
-function pickColor() {
-	let pegarCor = document.querySelectorAll(".pixel");
-	let i;
-	let valor;
-	let cor = document.querySelector("#colorp");
-	for(i = 0; i < pegarCor.length; i++){
-		pegarCor[i].addEventListener("click", function(e){
-			valor = this.style.backgroundColor;
-			console.log(valor);
-			//cor.value = this.style.backgroundColor;	
-			console.log(cor.value);
-		});
-	}
-}
 
 
 

@@ -1,7 +1,7 @@
 Fase 2:
-- Quatro botões de pintura e etc
+- Quatro botões de pintura e etc (em andamento)
 - Dimensões
-- Terminar Media Queries
+- Terminar Media Queries (em andamento)
 
 Fase 3:
 
@@ -16,4 +16,6 @@ Fase 4:
 Bugs que devem ser corrigidos: 
 
 - Parar de executar uma função quando chamar outra (em andamento)
+	|__ lapis e borracha ok (desktop)
+
 - Ao desenhar, não está saindo desenho quando damos click, apenas quando arrastamos
