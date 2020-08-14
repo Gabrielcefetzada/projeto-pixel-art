@@ -172,22 +172,22 @@ function DesenhaLapis(){
 // js lapis mobile
 
 function DesenhaLapisMobile(){
-	let pixels = document.querySelectorAll(".pixel");
-	let container = document.querySelector("#container-mobile");
-	let pressed = false;
+	let pixelsMob = document.querySelectorAll(".pixel");
+	let containerMob = document.querySelector("#container-mobile");
+	let pressedMob = false;
 	let i;
 
-	container.addEventListener("mousedown", function(){
-		pressed = true;
+	containerMob.addEventListener("mousedown", function(){
+		pressedMob = true;
 	})
 
 	container.addEventListener("mouseup", function(){
-		pressed = false;
+		pressedMob = false;
 	})
 
-	for(i = 0; i < pixels.length; i++){
-		pixels[i].addEventListener("mouseover", function(){
-			if(pressed){
+	for(i = 0; i < pixelsMob.length; i++){
+		pixelsMob[i].addEventListener("mouseover", function(){
+			if(pressedMob){
 				this.style.backgroundColor =  document.getElementById('colorp').value;
 			}
 		});
