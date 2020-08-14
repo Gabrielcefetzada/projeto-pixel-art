@@ -143,8 +143,8 @@ function DesenhaLapis(){
 	let container = document.querySelector("#container");
 	let pressed = false;
 	let i;
-	let j;
-	let index;
+	// let j;
+	// let index;
 
 	container.addEventListener("mousedown", function(){
 		pressed = true;
@@ -167,6 +167,31 @@ function DesenhaLapis(){
 	// let pixel2 = document.querySelectorAll(".pixel2")
 	// Array.from(pixel2);
 	// pixel2[index].style.backgroundColor = document.getElementById('colorp').value;
+}
+
+// js lapis mobile
+
+function DesenhaLapisMobile(){
+	let pixels = document.querySelectorAll(".pixel");
+	let container = document.querySelector("#container-mobile");
+	let pressed = false;
+	let i;
+
+	container.addEventListener("mousedown", function(){
+		pressed = true;
+	})
+
+	container.addEventListener("mouseup", function(){
+		pressed = false;
+	})
+
+	for(i = 0; i < pixels.length; i++){
+		pixels[i].addEventListener("mouseover", function(){
+			if(pressed){
+				this.style.backgroundColor =  document.getElementById('colorp').value;
+			}
+		});
+	}
 }
 
 

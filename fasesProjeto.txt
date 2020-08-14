@@ -12,3 +12,7 @@ Fase 3:
 Fase 4: 
 
 - Acabamento e revisão de erros
+
+Bugs que devem ser corrigidos: 
+
+- Parar de executar uma função quando chamar outra
