@@ -138,7 +138,7 @@ for(i = 0; i < 14; i++){
 
 // lapis 
 
-function DesenhaLapis(){
+function DesenhaLapis(stopFunction){
 	let pixels = document.querySelectorAll(".pixel");
 	let container = document.querySelector("#container");
 	let pressed = false;
@@ -171,47 +171,51 @@ function DesenhaLapis(){
 
 // js lapis mobile
 
-function DesenhaLapisMobile(){
+function DesenhaLapisMobile(stopFunction){
 	let pixelsMob = document.querySelectorAll(".pixel");
 	let containerMob = document.querySelector("#container-mobile");
 	let pressedMob = false;
 	let i;
 
-	containerMob.addEventListener("mousedown", function(){
-		pressedMob = true;
-	})
+if (stopFunction == 0) {
+		containerMob.addEventListener("mousedown", function(){
+			pressedMob = true;
+		})
 
-	container.addEventListener("mouseup", function(){
-		pressedMob = false;
-	})
+		container.addEventListener("mouseup", function(){
+			pressedMob = false;
+		})
 
-	for(i = 0; i < pixelsMob.length; i++){
-		pixelsMob[i].addEventListener("mouseover", function(){
-			if(pressedMob){
-				this.style.backgroundColor =  document.getElementById('colorp').value;
-			}
-		});
+		for(i = 0; i < pixelsMob.length; i++){
+			pixelsMob[i].addEventListener("mouseover", function(){
+				if(pressedMob){
+					this.style.backgroundColor =  document.getElementById('colorp').value;
+				}
+			});
+		}
 	}
 }
 
 
 // js borracha 
 
-function Apaga(){
+function Apaga(stopFunction){
 	let borracha = document.querySelectorAll(".caixaPixelizada");
 	let borracha2 = document.querySelectorAll(".caixaPixelizadaPreta");
 	let i;
 
-	for(i = 0; i < borracha.length; i++){
-		borracha[i].addEventListener("mouseover", function(){
-			this.style.backgroundColor = 'white';
-		});
-	}
+if(stopFunction == 0){
+		for(i = 0; i < borracha.length; i++){
+			borracha[i].addEventListener("mouseover", function(){
+				this.style.backgroundColor = 'white';
+			});
+		}
 
-	for(i = 0; i < borracha2.length; i++){
-		borracha2[i].addEventListener("mouseover", function(){
+		for(i = 0; i < borracha2.length; i++){
+			borracha2[i].addEventListener("mouseover", function(){
 			this.style.backgroundColor = 'rgba(194, 196, 190, 0.9)';
-		});
+			});
+		}
 	}
 }
 

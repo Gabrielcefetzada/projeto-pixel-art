@@ -16,3 +16,4 @@ Fase 4:
 Bugs que devem ser corrigidos: 
 
 - Parar de executar uma função quando chamar outra
+- Ao desenhar, não está saindo desenho quando damos click, apenas quando arrastamos
