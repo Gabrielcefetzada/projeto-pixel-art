@@ -215,6 +215,26 @@ function Apaga(){
 	}
 }
 
+// js borracha mobile 
+
+function ApagaMobile(){
+	let borrachaMob = document.querySelectorAll(".caixaPixelizadaMobile");
+	let borrachaMob2 = document.querySelectorAll(".caixaPixelizadaPretaMobile");
+	let i;
+
+	for(i = 0; i < borrachaMob.length; i++){
+		borrachaMob[i].addEventListener("mouseover", function(){
+			this.style.backgroundColor = 'white';
+		});
+	}
+
+	for(i = 0; i < borrachaMob2.length; i++){
+		borrachaMob2[i].addEventListener("mouseover", function(){
+			this.style.backgroundColor = 'rgba(194, 196, 190, 0.9)';
+		});
+	}
+}
+
 // js para a modal e para escurecer o fundo ao abri-la
 
 let modal = document.getElementById('sobre-a-gente');
