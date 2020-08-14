@@ -145,7 +145,7 @@ function DesenhaLapis(stopFunction){
 	let i;
 	// let j;
 	// let index;
-
+if (stopFunction == 0) {
 	container.addEventListener("mousedown", function(){
 		pressed = true;
 	})
@@ -162,7 +162,7 @@ function DesenhaLapis(stopFunction){
 			}
 		});
 	}
-
+}
 	// lapis overview
 	// let pixel2 = document.querySelectorAll(".pixel2")
 	// Array.from(pixel2);
@@ -171,13 +171,12 @@ function DesenhaLapis(stopFunction){
 
 // js lapis mobile
 
-function DesenhaLapisMobile(stopFunction){
+function DesenhaLapisMobile(){
 	let pixelsMob = document.querySelectorAll(".pixel");
 	let containerMob = document.querySelector("#container-mobile");
 	let pressedMob = false;
 	let i;
 
-if (stopFunction == 0) {
 		containerMob.addEventListener("mousedown", function(){
 			pressedMob = true;
 		})
@@ -194,7 +193,7 @@ if (stopFunction == 0) {
 			});
 		}
 	}
-}
+
 
 
 // js borracha 
