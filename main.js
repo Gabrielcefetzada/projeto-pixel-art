@@ -250,12 +250,16 @@ function ApagaMobile(){
 	}
 }
 
-//colorpicker
-
-function rgbToHex(r, g, b) {
-	return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+//Function to convert hex format to a rgb color
+function rgb2hex(rgb){
+	rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+	return (rgb && rgb.length === 4) ? "#" +
+	 ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
+	 ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
+	 ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
 }
 
+//colorpicker
 
 function pickColor() {
 	let pegarCor = document.querySelectorAll(".pixel");
@@ -264,9 +268,9 @@ function pickColor() {
 	let cor = document.querySelector("#colorp");
 	for(i = 0; i < pegarCor.length; i++){
 		pegarCor[i].addEventListener("click", function(e){
-			valor = this.style.backgroundColor;
+			valor = e.target.style.backgroundColor;
 			console.log(valor);
-			//cor.value = this.style.backgroundColor;	
+			cor.value = rgb2hex(valor);	
 			console.log(cor.value);
 		});
 	}
