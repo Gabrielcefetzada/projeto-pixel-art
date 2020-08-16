@@ -136,6 +136,8 @@ for(i = 0; i < 14; i++){
 	clonaOsQuadradinnhos4();
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // lapis 
 
 function DesenhaLapis(stopFunction){
@@ -143,8 +145,7 @@ function DesenhaLapis(stopFunction){
 	let container = document.querySelector("#container");
 	let pressed = false;
 	let i;
-	// let j;
-	// let index;
+
 	if (stopFunction == 0) {
 		container.addEventListener("mousedown", function(){
 			pressed = true;
@@ -158,15 +159,10 @@ function DesenhaLapis(stopFunction){
 			pixels[i].addEventListener("mouseover", function(){
 				if(pressed == true){
 					this.style.backgroundColor =  document.getElementById('colorp').value;
-					//alert(index);
 				}
 			});
 		}
 	}
-	// lapis overview
-	// let pixel2 = document.querySelectorAll(".pixel2")
-	// Array.from(pixel2);
-	// pixel2[index].style.backgroundColor = document.getElementById('colorp').value;
 }
 
 // js lapis mobile
@@ -251,6 +247,7 @@ function ApagaMobile(){
 }
 
 //Function to convert hex format to a rgb color
+
 function rgb2hex(rgb){
 	rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
 	return (rgb && rgb.length === 4) ? "#" +
@@ -259,7 +256,7 @@ function rgb2hex(rgb){
 	 ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
 }
 
-//colorpicker
+// colorpicker
 
 function pickColor() {
 	let pegarCor = document.querySelectorAll(".pixel");
@@ -273,6 +270,20 @@ function pickColor() {
 			cor.value = rgb2hex(valor);	
 			console.log(cor.value);
 		});
+	}
+}
+
+// pincel maior 
+
+function pincelMaior(){
+var container = document.querySelector('#container');
+
+	for (var i = 0, len = container.children.length; i < len; i++){
+    	(function indiceAtual(index){
+        	container.children[i].onclick = function(){
+        	      alert(index)  ;
+        	}    
+    	})(i);
 	}
 }
 
@@ -302,8 +313,12 @@ function FechaModal(){
 	escuro.style.display = 'none';
 }
 
+// espaço para guardar trechos de código que poderão ser usados futuramente
 
 
+// alert(Array.from(container.children).indexOf(this));
 
-
-
+	// lapis overview
+	// let pixel2 = document.querySelectorAll(".pixel2")
+	// Array.from(pixel2);
+	// pixel2[index].style.backgroundColor = document.getElementById('colorp').value;
