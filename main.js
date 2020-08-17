@@ -277,15 +277,20 @@ function pickColor() {
 
 function pincelMaior(){
 var container = document.querySelector('#container');
+let i;
+let index;
+let pixels = document.querySelectorAll(".pixel");
 
-	for (var i = 0, len = container.children.length; i < len; i++){
-    	(function indiceAtual(index){
-        	container.children[i].onclick = function(){
-        	      alert(index)  ;
-        	}    
-    	})(i);
-	}
-}
+	for(i = 0; i < pixels.length; i++){
+			pixels[i].addEventListener("click", function(){
+
+					console.log(((Array.from(container.children).indexOf(this))+1));
+					index = ((Array.from(container.children).indexOf(this))+1);
+					alert(index);
+					
+				});
+			}
+		}
 
 // js para a modal e para escurecer o fundo ao abri-la
 
