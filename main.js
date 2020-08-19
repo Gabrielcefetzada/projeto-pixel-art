@@ -140,13 +140,12 @@ for(i = 0; i < 14; i++){
 
 // lapis 
 
-function DesenhaLapis(stopFunction){
+function DesenhaLapis(){
 	let pixels = document.querySelectorAll(".pixel");
 	let container = document.querySelector("#container");
 	let pressed = false;
 	let i;
 
-	if (stopFunction == 0) {
 		container.addEventListener("mousedown", function(){
 			pressed = true;
 		})
@@ -163,7 +162,6 @@ function DesenhaLapis(stopFunction){
 			});
 		}
 	}
-}
 
 // js lapis mobile
 
@@ -190,17 +188,13 @@ function DesenhaLapisMobile(){
 		}
 	}
 
-
-
 // borracha 
 
-function Apaga(stopFunction){
+function Apaga(){
 	let borracha = document.querySelectorAll(".caixaPixelizada");
 	let borracha2 = document.querySelectorAll(".caixaPixelizadaPreta");
 	let i;
 	let pressed = false;
-
-if(stopFunction == 0){
 
 		container.addEventListener("mousedown", function(){
 			pressed = true;
@@ -224,7 +218,6 @@ if(stopFunction == 0){
 			});
 		}
 	}
-}
 
 // borracha mobile 
 
@@ -263,6 +256,7 @@ function pickColor() {
 	let i;
 	let valor;
 	let cor = document.querySelector("#colorp");
+
 	for(i = 0; i < pegarCor.length; i++){
 		pegarCor[i].addEventListener("click", function(e){
 			valor = e.target.style.backgroundColor;
@@ -280,23 +274,33 @@ var container = document.querySelector('#container');
 let i;
 let index;
 let pixels = document.querySelectorAll(".pixel");
+let pressed = false;
+
+		container.addEventListener("mousedown", function(){
+			pressed = true;
+		})
+
+		container.addEventListener("mouseup", function(){
+			pressed = false;
+		})
 
 	for(i = 0; i < pixels.length; i++){
-			pixels[i].addEventListener("click", function(){
-
-					console.log(((Array.from(container.children).indexOf(this))+1));
-					index = ((Array.from(container.children).indexOf(this))+1);
-					alert(index);
-					
+			pixels[i].addEventListener("mouseover", function(){
+				if (pressed) 
+					index = (Array.from(container.children).indexOf(this));
+						pixels[index].style.backgroundColor = document.getElementById('colorp').value;
+						pixels[index+1].style.backgroundColor = document.getElementById('colorp').value;
+						pixels[index-1].style.backgroundColor = document.getElementById('colorp').value;
+						pixels[index+90].style.backgroundColor = document.getElementById('colorp').value;
+						pixels[index-90].style.backgroundColor = document.getElementById('colorp').value;
 				});
 			}
 		}
-
 // js para a modal e para escurecer o fundo ao abri-la
 
 let modal = document.getElementById('sobre-a-gente');
 let escuro = document.getElementById("gradient");
-
++1
 function AbreModal(){
 	if(modal.style.display == 'block'){
 		modal.style.display = 'none';
