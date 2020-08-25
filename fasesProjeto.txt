@@ -19,3 +19,5 @@ Bugs que devem ser corrigidos:
 	|__ lapis e borracha ok (desktop)
 
 - Ao desenhar, não está saindo desenho quando damos click, apenas quando arrastamos
+
+- margem media queries

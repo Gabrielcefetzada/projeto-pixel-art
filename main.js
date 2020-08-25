@@ -111,7 +111,7 @@ function DesenhaLapis(){
 			pixels[i].addEventListener("mouseover", function(){
 				if(pressed == true){
 					this.style.backgroundColor =  document.getElementById('colorp').value;
-				}
+				} 
 			});
 		}
 	}
@@ -200,10 +200,11 @@ let pressed = false;
 						pixels[index+1].style.backgroundColor = document.getElementById('colorp').value;
 						pixels[index-1].style.backgroundColor = document.getElementById('colorp').value;
 						pixels[index+90].style.backgroundColor = document.getElementById('colorp').value;
-						pixels[index-90].style.backgroundColor = document.getElementById('colorp').value;
-				});
-			}
+						pixels[index-90].style.backgroundColor = document.getElementById('colorp').value;		
+			}); 
 		}
+	}
+
 // js para a modal e para escurecer o fundo ao abri-la
 
 let modal = document.getElementById('sobre-a-gente');

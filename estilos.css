@@ -217,7 +217,7 @@ img {
 #container-mobile {
 	display: none;
 	max-width: 320px;
-	margin: 3%;
+	margin: auto;
 }
 
 .pixel {
@@ -438,6 +438,7 @@ img {
   	display: inline-flex;
   	flex-direction: row;
 	flex-wrap: wrap;
+	margin: auto;
   }
 }
 
