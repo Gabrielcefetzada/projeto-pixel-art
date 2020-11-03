@@ -21,17 +21,17 @@ if(isset($_POST["email"]) && !empty($_POST["email"])){
 	if(mail($to, $subject, $body, $header)){
 		?>
 
-		<h1 style="color: white; background-color: green; padding: 10px; text-align: center; margin-top: 10%; border-radius: 5px;"> E-mail enviado com sucesso! Responderemos você o mais breve possível.</h1>
+		<h1 style="color: white; background-color: green; padding: 10px; text-align: center; margin-top: 10%; border-radius: 5px;"> The E-mail was sent successfully. We will answer you soon!</h1>
 
-		<p style="justify-content: center; align-items: center; text-align: center;"><a href="index.html" style="color: black; background-color: #ff9900; padding: 10px; border-radius: 5px; text-decoration:none;">Voltar para o início</a></p>
+		<p style="justify-content: center; align-items: center; text-align: center;"><a href="index.html" style="color: black; background-color: purple; padding: 10px; border-radius: 5px; text-decoration:none;">Back to painting</a></p>
 
 		<?php
 	} else {
 		?>
 
-		<h1 style="color: white; background-color: red; padding: 10px; text-align: center; margin-top: 10%; border-radius: 5px;"> O E-mail não pôde ser enviado. Tente mais tarde ou tente outra forma de contato.</h1>
+		<h1 style="color: white; background-color: red; padding: 10px; text-align: center; margin-top: 10%; border-radius: 5px;"> The E-mail couldn't be sent. Try later or try another way to contact us.</h1>
 
-		<p style="justify-content: center; align-items: center; text-align: center;"><a href="index.html" style="color: black; background-color: #ff9900; padding: 10px; border-radius: 5px; text-decoration:none;">Voltar para o início</a></p>
+		<p style="justify-content: center; align-items: center; text-align: center;"><a href="index.html" style="color: black; background-color: purple; padding: 10px; border-radius: 5px; text-decoration:none;">Back to painting</a></p>
 		<?php
 
 	}

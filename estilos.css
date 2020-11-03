@@ -20,6 +20,7 @@ img {
 	height: 35px;
 }
 
+
  #menu-barra {
 	display: none;
 	background-color: white;
@@ -83,12 +84,13 @@ img {
 	display: none;
 }
 
-#Sobre, #Logo {
+#Sobre, #Logo, .botao-msg {
 	margin-top: 1%;
 	padding: 1px 5px;
 	font-size: 30px;
 	font-family: 'Red Rose', cursive;
 	color: white;
+	border-radius: 5px;
 }
 
 #Sobre {
@@ -102,10 +104,24 @@ img {
 	margin-right: 33%;
 }
 
-#Sobre:hover, #Logo:hover {
+.botao-msg {
+	background-color: #4B2665;
+	text-align: center;
+	padding: 10px 10px;
+	margin-left: 15%;
+	margin-right: 15%;
+	border-radius: 5px;
+	align-items: center;
+	justify-content: center;
+}
+
+.botao-msg a {
+	text-decoration: none;
+	color: white;
+}
+
+#Sobre:hover, #Logo:hover, .botao-msg:hover {
 	background-color: #150524;
-	padding: 1px 5px;
-	border-radius: 2px;
 	cursor: pointer;
 }
 
@@ -318,6 +334,7 @@ img {
 	justify-content: center;
 	font-family: 'Red Rose', cursive;
 }
+
 .pixel2 {
 	width: 5px;
 	height: 7px;

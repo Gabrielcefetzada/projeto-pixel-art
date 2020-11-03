@@ -1,5 +1,5 @@
 
-// js para que as caixas pidelizadas apareçam (desktop)
+// js para que as caixas pixelizadas apareçam (desktop)
 
 let container = document.querySelector('#container');
 

@@ -11,32 +11,32 @@
 </head>
 
 <body>
-<div id="gradient"></div>
-<div id='container-sobre-a-gente'>
-	<div id="sobre-a-gente">
-		<p>
-			Hello! 
-			We, Gabriel Augusto and Gustavo Boeira, are brazilian students of Computer Networks at CEFET-MG. We developed this project in order to apply basic and complex knowledge in Front-end, Back-end and Frameworks.
-		</p>
-		<span id='botao-close' onclick="FechaModal()">Close</span>
+	<div id="gradient"></div>
+	<div id='container-sobre-a-gente'>
+		<div id="sobre-a-gente">
+			<p>
+				Hello! 
+				We, Gabriel Augusto and Gustavo Boeira, are brazilian students of Computer Networks at CEFET-MG. We developed this project in order to apply basic and complex knowledge in Front-end, Back-end and Frameworks.
+			</p>
+			<span id='botao-close' onclick="FechaModal()">Close</span>
+		</div>
 	</div>
-</div>
-<header>
-	<span id = 'Logo'>Pixelated</span>
+	<header>
+		<span id = 'Logo'>Pixelated</span>
 		<img src="imgs/undo.png" class='button undo-reundo'  style='background-color: white;'>
 		<img src="imgs/reundo.png"class='button undo-reundo' style='background-color: white;'>
 		<div class="dropdown" style="float:right;">
-  			<button class="dropbtn"><img src="imgs/menubars.png"></i></i></button>
-  			<div class="dropdown-content">
-   				 <a href="#">About Us</a>
-  			</div>
+			<button class="dropbtn"><img src="imgs/menubars.png"></i></i></button>
+			<div class="dropdown-content">
+				<a href="#">About Us</a>
+			</div>
 		</div>
 		<!-- <i class="fa fa-bars" aria-hidden="true" id="menu-barra"></i> ícone de menu em barras importado do Font Awesome (Aparecerá no mobile) --> 
-	<span id ='Sobre' onclick="AbreModal()">About us</span>
-</header>
+		<span id ='Sobre' onclick="AbreModal()">About us</span>
+	</header>
 
-<div class="container-das-tools">
-	<h1 class="titulo-em-cima-do-container">Tools</h1>
+	<div class="container-das-tools">
+		<h1 class="titulo-em-cima-do-container">Tools</h1>
 		<div class="container-flex">
 			<button class="button" onclick="DesenhaLapis(); DesenhalapisMobile();"><img src="imgs/lapis.png"></button>
 			<button class="button" onclick="Apaga(); ApagaMobile();"><img src="imgs/borracha.png"></button>
@@ -48,37 +48,37 @@
 			<div class='container-salvar'>
 				<button class="button-salvar button"><img src="imgs/save.png"></button>
 			</div>
+		</div>
 	</div>
-</div>
 
-<div class="container-tools-direito">
-	<h1 class="titulo-em-cima-do-container">Overview</h1>
-	<div id="overview"></div>
-	<div class="container-color-picker">
-		<button class="button"><img src="imgs/pngguru.com.png"><input type="color" id="colorp" class="button"></button>
+	<div class="container-tools-direito">
+		<h1 class="titulo-em-cima-do-container">Overview</h1>
+		<div id="overview"></div>
+		<div class="container-color-picker">
+			<button class="button"><img src="imgs/pngguru.com.png"><input type="color" id="colorp" class="button"></button>
+		</div>
 	</div>
-</div>
 
-<div id="container">
-</div>
+	<div id="container">
+	</div>
 
-<div id="container-mobile">
-</div>
+	<div id="container-mobile">
+	</div>
 
-<div class="container-color-picker-mobile"> <!-- Essa div aparece apenas em dispositivos mobile -->
-	<span>Pick colors: </span><input type="color" id="colorp" class="button">
-</div>
+	<div class="container-color-picker-mobile"> <!-- Essa div aparece apenas em dispositivos mobile -->
+		<span>Pick colors: </span><input type="color" id="colorp" class="button">
+	</div>
 
-<div id="anuncie-aqui">Advertsing</div>
+	<div id="anuncie-aqui">Advertsing</div>
+	<div class="botao-msg"><a href = "feedback.html">Click here to send us a feedback!</a></div>
+	<footer>
+		<p class="footer">© 2020 Copyright Pixelated. See this project on ‍<a href="https://github.com/gustavoboeira/	projeto-pixel-art">GitHub</a></p>
+		<p class="footer-mobile">© 2020 Copyright Pixelated.</p>
+	</footer>
 
-<footer>
-	<p class="footer">© 2020 Copyright Pixelated. See this project on ‍<a href="https://github.com/gustavoboeira/	projeto-pixel-art">GitHub</a></p>
-	<p class="footer-mobile">© 2020 Copyright Pixelated.</p>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="bootstrap.min.js"></script>
-<script src="main.js"></script>
-<script src="mobile.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="main.js"></script>
+	<script src="mobile.js"></script>
 </body>
 </html>
