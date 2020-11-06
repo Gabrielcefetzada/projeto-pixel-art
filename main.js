@@ -1,6 +1,7 @@
 
 // js para que as caixas pixelizadas apareçam (desktop)
 
+let ferramentaAtual = null;
 let container = document.querySelector('#container');
 
 function clonaOsQuadradinnhos1(){
@@ -45,7 +46,7 @@ for(i = 0; i < 22; i++){
 	clonaOsQuadradinnhos1();
 	clonaOsQuadradinnhos2();
 }
- 
+
 // fazer o quadrado pixelizado no overiew
 
 
@@ -99,22 +100,28 @@ function DesenhaLapis(){
 	let pressed = false;
 	let i;
 
-		container.addEventListener("mousedown", function(){
-			pressed = true;
-		})
+	container.addEventListener("mousedown", function(){
+		pressed = true;
+	})
 
-		container.addEventListener("mouseup", function(){
-			pressed = false;
-		})
+	container.addEventListener("mouseup", function(){
+		pressed = false;
+	})
 
-		for(i = 0; i < pixels.length; i++){
-			pixels[i].addEventListener("mouseover", function(){
-				if(pressed == true){
+	for(i = 0; i < pixels.length; i++){
+		pixels[i].addEventListener("mouseover", function(){
+			if(pressed == true){
+				ferramentaAtual = "lapis";
+				if(ferramentaAtual == "lapis")
 					this.style.backgroundColor =  document.getElementById('colorp').value;
-				} 
-			});
-		}
+			} 
+		});
 	}
+
+	if(pressed == false){
+		ferramentaAtual == null;
+	}
+}
 
 // borracha 
 
@@ -124,37 +131,44 @@ function Apaga(){
 	let i;
 	let pressed = false;
 
-		container.addEventListener("mousedown", function(){
-			pressed = true;
-		})
+	container.addEventListener("mousedown", function(){
+		pressed = true;
+	})
 
-		container.addEventListener("mouseup", function(){
-			pressed = false;
-		})
+	container.addEventListener("mouseup", function(){
+		pressed = false;
+	})
 
 	for(i = 0; i < borracha.length; i++){
-			borracha[i].addEventListener("mouseover", function(){
-				if (pressed) 
+		borracha[i].addEventListener("mouseover", function(){
+			if (pressed) 
 				this.style.backgroundColor = 'white';
-			});
-		}
+		});
+	}
 
 	for(i = 0; i < borracha2.length; i++){
-			borracha2[i].addEventListener("mouseover", function(){
-			if (pressed)
-			this.style.backgroundColor = 'rgba(194, 196, 190, 0.9)';
-			});
-		}
+		borracha2[i].addEventListener("mouseover", function(){
+			if (pressed){
+				ferramentaAtual = "borracha";
+				if (ferramentaAtual == "borracha") 
+				this.style.backgroundColor = 'rgba(194, 196, 190, 0.9)';
+			}
+		});
 	}
+
+if(pressed == false){
+	ferramentaAtual == null;
+	}
+}
 
 //Function to convert hex format to a rgb color
 
 function rgb2hex(rgb){
 	rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
 	return (rgb && rgb.length === 4) ? "#" +
-	 ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
-	 ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
-	 ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
+	("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
+	("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
+	("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
 }
 
 // colorpicker
@@ -167,10 +181,8 @@ function pickColor() {
 
 	for(i = 0; i < pegarCor.length; i++){
 		pegarCor[i].addEventListener("click", function(e){
-			valor = e.target.style.backgroundColor;
-			console.log(valor);
+			valor = this.style.backgroundColor;
 			cor.value = rgb2hex(valor);	
-			console.log(cor.value);
 		});
 	}
 }
@@ -178,38 +190,45 @@ function pickColor() {
 // pincel maior 
 
 function pincelMaior(){
-var container = document.querySelector('#container');
-let i;
-let index;
-let pixels = document.querySelectorAll(".pixel");
-let pressed = false;
+	var container = document.querySelector('#container');
+	let i;
+	let index;
+	let pixels = document.querySelectorAll(".pixel");
+	let pressed = false;
 
-		container.addEventListener("mousedown", function(){
-			pressed = true;
-		})
+	container.addEventListener("mousedown", function(){
+		pressed = true;
+	})
 
-		container.addEventListener("mouseup", function(){
-			pressed = false;
-		})
+	container.addEventListener("mouseup", function(){
+		pressed = false;
+	})
 
 	for(i = 0; i < pixels.length; i++){
-			pixels[i].addEventListener("mouseover", function(){
-				if (pressed) 
+		pixels[i].addEventListener("mouseover", function(){
+			if (pressed) {
+				ferramentaAtual = "pincelMaior";
+				if (ferramentaAtual == "pincelMaior") 
 					index = (Array.from(container.children).indexOf(this));
-						pixels[index].style.backgroundColor = document.getElementById('colorp').value;
-						pixels[index+1].style.backgroundColor = document.getElementById('colorp').value;
-						pixels[index-1].style.backgroundColor = document.getElementById('colorp').value;
-						pixels[index+90].style.backgroundColor = document.getElementById('colorp').value;
-						pixels[index-90].style.backgroundColor = document.getElementById('colorp').value;		
-			}); 
-		}
+				pixels[index].style.backgroundColor = document.getElementById('colorp').value;
+				pixels[index+1].style.backgroundColor = document.getElementById('colorp').value;
+				pixels[index-1].style.backgroundColor = document.getElementById('colorp').value;
+				pixels[index+90].style.backgroundColor = document.getElementById('colorp').value;
+				pixels[index-90].style.backgroundColor = document.getElementById('colorp').value;	
+			}	
+		}); 
 	}
+
+	if(pressed == false){
+		ferramentaAtual == null;
+	}
+}
 
 // js para a modal e para escurecer o fundo ao abri-la
 
 let modal = document.getElementById('sobre-a-gente');
 let escuro = document.getElementById("gradient");
-+1
+
 function AbreModal(){
 	if(modal.style.display == 'block'){
 		modal.style.display = 'none';

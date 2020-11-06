@@ -228,6 +228,7 @@ img {
 	max-width: 900px;
 	margin: auto;
 	margin-top: 2px;
+	cursor: pointer;
 }
 
 #container-mobile {
@@ -387,37 +388,5 @@ img {
 	height: 80px;
 }
 
-/* Css para o formulário PHP */
 
-.container-form {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.field {
-	width: 500px;
-	padding: 10px;
-	margin: 1%;
-	border-radius: 5px;
-}
-
-.form {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-textarea {
-	height: 150px;
-}
-
-h1 {
-	color: white;
-}
-
-input[type="submit"] {
-	cursor: pointer;
-}
 
